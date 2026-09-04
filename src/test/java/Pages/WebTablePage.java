@@ -1,6 +1,7 @@
 package Pages;
 
 import HelperMethods.ElementMetohods;
+import ObjectData.WebTableObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -62,9 +63,9 @@ public class WebTablePage {
     WebElement departmentColumn;
 
 
-    public void addEntry(String firstName, String lastName, String userEmail, String age, String salary, String department){
+    public void addEntry(WebTableObject data){
         clickOnAddButton();
-        enterFirstNameField(firstName);
+        enterFirstNameField(data.getFirstName);
         enterLastNameField(lastName);
         enterUserEmailField(userEmail);
         enterAgeField(age);

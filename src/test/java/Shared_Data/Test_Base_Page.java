@@ -1,5 +1,6 @@
 package Shared_Data;
 
+import Shared_Data.Browser.Browser_Factory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -14,8 +15,7 @@ public class Test_Base_Page {
 
     @Test
     public void initialiseBrowser() {
-        this.driver = new ChromeDriver();
-        driver.manage().window().maximize();
+        driver = new Browser_Factory().getBrowserFactory();
         driver.get("https://demoqa.com/");
     }
 
