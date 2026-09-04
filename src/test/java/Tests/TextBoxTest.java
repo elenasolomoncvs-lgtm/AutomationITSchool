@@ -1,9 +1,11 @@
 package Tests;
 
 import HelperMethods.ElementMetohods;
+import ObjectData.TextBoxObject;
 import Pages.CommonPage;
 import Pages.HomePage;
 import Pages.TextBoxPage;
+import XmlReader.XmlDataLoader;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -14,12 +16,19 @@ import org.testng.annotations.Test;
 
 
 import java.util.List;
+import java.util.Map;
 
 public class TextBoxTest {
 
     private Object userNameField;
+
+    private Map<String, TextBoxObject> textBoxObjectMap;
+
     @Test
     public void metodaTest() throws InterruptedException {
+
+        textBoxObjectMap = XmlDataLoader.loadData("C:\\Users\\ASOC PROP Nr.13\\Desktop\\Proiect individual\\Automation_Sesiunea_1\\src\\test\\resources\\TextBoxData.xml", TextBoxObject.class);
+        TextBoxObject data = textBoxObjectMap.get("dataSet_1");
 
         ChromeOptions options = new ChromeOptions();
         options.addArguments(

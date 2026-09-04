@@ -1,0 +1,15 @@
+<dataSets>
+    <dataSet_1>
+        <userName>Elena 1</userName>
+        <userEmail>abc@test.com</userEmail>
+        <currentAddress>Onesti</currentAddress>
+        <permanentAddress>test adresa </permanentAddress>
+    </dataSet_1>
+
+    <dataSet_2>
+        <userName>Alex</userName>
+        <userEmail>test2abc@test.com</userEmail>
+        <currentAddress>Bucuresti</currentAddress>
+        <permanentAddress>test adresa </permanentAddress>
+    </dataSet_2>
+</dataSets>
