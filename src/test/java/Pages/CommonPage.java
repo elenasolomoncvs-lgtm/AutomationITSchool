@@ -1,6 +1,7 @@
 package Pages;
 
-import HelperMethods.ElementMetohods;
+import HelperMethods.ElementMethods;
+import Logger.LoggerUtility;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -11,11 +12,11 @@ import java.util.List;
 public class CommonPage {
 
     WebDriver driver;
-    ElementMetohods elementMethods;
+    ElementMethods elementMethods;
 
     public CommonPage(WebDriver driver) {
         this.driver = driver;
-        this.elementMethods = new ElementMetohods(driver);
+        this.elementMethods = new ElementMethods(driver);
         PageFactory.initElements(driver, this); //fara aceasta linie nu o sa gaseasca elementele
 
     }
@@ -25,6 +26,7 @@ public class CommonPage {
     public void clickOnSubMenu(String text)
     {
         elementMethods.selectElementFromListByText(elements,text);
+        LoggerUtility.infoTestCase("The user clicked on " + text + " submenu");
     }
 
 

@@ -5,10 +5,11 @@
 
   <test name="Regression Tests">
     <classes>
-      <class name="Tests.AlertTest"/>
-      <class name="Tests.FramesTest"/>
-      <class name="Tests.PracticeForumTest"/>
-      <class name="Tests.TextBoxTest"/>
+<!--      <class name="Tests.AlertTest"/>-->
+<!--      <class name="Tests.FramesTest"/>-->
+<!--      <class name="Tests.PracticeForumTest"/>-->
+<!--      <class name="Tests.TextBoxTest"/>-->
+        <class name="Tests.WebTableTest"/>
     </classes>
   </test>
 

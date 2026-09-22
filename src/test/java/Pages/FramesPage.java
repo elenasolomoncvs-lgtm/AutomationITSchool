@@ -1,10 +1,8 @@
 package Pages;
 
-import HelperMethods.ElementMetohods;
-import org.openqa.selenium.By;
+import HelperMethods.ElementMethods;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
@@ -12,11 +10,11 @@ import org.testng.Assert;
 public class FramesPage  {
 
     WebDriver driver;
-    ElementMetohods elementMethods;
+    ElementMethods elementMethods;
 
     public FramesPage(WebDriver driver) {
         this.driver = driver;
-        this.elementMethods = new ElementMetohods(driver);
+        this.elementMethods = new ElementMethods(driver);
         PageFactory.initElements(driver, this);
     }
 

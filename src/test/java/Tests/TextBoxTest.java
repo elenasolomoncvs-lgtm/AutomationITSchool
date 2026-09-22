@@ -1,23 +1,24 @@
 package Tests;
 
-import HelperMethods.ElementMetohods;
 import ObjectData.TextBoxObject;
 import Pages.CommonPage;
 import Pages.HomePage;
 import Pages.TextBoxPage;
 import XmlReader.XmlDataLoader;
+import com.aventstack.chaintest.plugins.ChainTestListener;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 
 import java.util.List;
 import java.util.Map;
-
+@Listeners(ChainTestListener.class)
 public class TextBoxTest {
 
     private Object userNameField;
@@ -51,12 +52,13 @@ public class TextBoxTest {
 //        List<WebElement> cardList = driver.findElements(By.xpath("//*[@class='category-cards']//*[@data-discover='true']"));
 //        cardList.get(0).click();
 
-        js.executeScript("window.scrollBy(0, -800);"); // 800 pixeli in jos
-
 //        List<WebElement> elementsList = driver.findElements(By.xpath("//*[@class='element-list accordion-collapse collapse show']//*[@data-discover='true']"));
 //        elementsList.get(0).click();
+
         HomePage homePage = new HomePage(driver);
         homePage.clickElements();
+
+        js.executeScript("window.scrollBy(0, -800);"); // 800 pixeli in jos
 
         CommonPage commonPage = new CommonPage(driver);
         commonPage.clickOnSubMenu("Text Box");

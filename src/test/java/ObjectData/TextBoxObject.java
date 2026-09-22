@@ -3,7 +3,7 @@ package ObjectData;
 public class TextBoxObject {
 
     private String userName;
-    private String userEmail;
+    private String userEmailAddress;
     private String currentAddress;
     private String permanentAddress;
 
@@ -12,7 +12,7 @@ public class TextBoxObject {
     }
 
     public String getUserEmail() {
-        return userEmail;
+        return userEmailAddress;
     }
 
     public String getCurrentAddress() {
