@@ -30,7 +30,7 @@ public class WebTableTest extends Test_Base_Page {
                 "--user-data-dir=C:\\SeleniumChromeProfile"
         );
 
-        webTableObjectMap = XmlDataLoader.loadData("C:\\Users\\ASOC PROP Nr.13\\Desktop\\Proiect individual\\Automation_Sesiunea_1\\src\\test\\resources\\WebTableData.xml", WebTableObject.class);
+        webTableObjectMap = XmlDataLoader.loadData("src/test/resources/WebTableData.xml", WebTableObject.class);
         WebTableObject data = webTableObjectMap.get("dataSet_1");
         WebTableObject data2 = webTableObjectMap.get("dataSet_2");
 

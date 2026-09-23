@@ -1,6 +1,7 @@
 package Pages;
 
 import HelperMethods.ElementMethods;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -11,8 +12,11 @@ public class HomePage {
     WebDriver driver;
     ElementMethods elementMethods;
 
+    JavascriptExecutor js;
+
     public HomePage(WebDriver driver) {
         this.driver = driver;
+        this.js = (JavascriptExecutor)driver;
         this.elementMethods = new ElementMethods(driver);
         PageFactory.initElements(driver, this); //fara aceasta linie nu o sa gaseasca elementele
     }

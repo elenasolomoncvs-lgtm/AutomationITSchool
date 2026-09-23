@@ -16,20 +16,20 @@
 
     <dependencies>
         <!-- Source: https://mvnrepository.com/artifact/org.testng/testng -->
-         <dependency>
+        <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>7.12.0</version>
-          <scope>test</scope>
-         </dependency>
+            <scope>test</scope>
+        </dependency>
 
-    <!-- Source: https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
-    <dependency>
-        <groupId>org.seleniumhq.selenium</groupId>
-        <artifactId>selenium-java</artifactId>
-        <version>4.45.0</version>
-        <scope>compile</scope>
-    </dependency>
+        <!-- Source: https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>4.45.0</version>
+            <scope>compile</scope>
+        </dependency>
 
         <!-- Source: https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
         <dependency>
@@ -55,6 +55,28 @@
 
     </dependencies>
 
+    <profiles>
+        <profile>
+            <id>CustomSuite</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>3.5.0</version>
+                        <configuration>
+                            <suiteXmlFiles>
+                                <!--suppress UnresolvedMavenProperty -->
+                                <suiteXmlFile>${suiteXmlFile}.xml</suiteXmlFile>
+                            </suiteXmlFiles>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+
+
     <build>
         <pluginManagement>
             <plugins>
@@ -63,13 +85,18 @@
                     <artifactId>maven-surefire-plugin</artifactId>
                     <version>3.5.0</version>
                     <configuration>
+                        <suiteXmlFiles>
+                            <suiteXmlFile>${suiteXmlFile}.xml</suiteXmlFile>
+                        </suiteXmlFiles>
                         <systemPropertyVariables>
                             <browser>chrome</browser>
+                            <ci_cd>false</ci_cd>
                         </systemPropertyVariables>
                     </configuration>
                 </plugin>
             </plugins>
         </pluginManagement>
     </build>
+
 
 </project>
