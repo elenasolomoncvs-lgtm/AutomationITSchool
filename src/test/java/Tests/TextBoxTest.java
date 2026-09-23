@@ -28,7 +28,7 @@ public class TextBoxTest {
     @Test
     public void metodaTest() throws InterruptedException {
 
-        textBoxObjectMap = XmlDataLoader.loadData("C:\\Users\\ASOC PROP Nr.13\\Desktop\\Proiect individual\\Automation_Sesiunea_1\\src\\test\\resources\\TextBoxData.xml", TextBoxObject.class);
+        textBoxObjectMap = XmlDataLoader.loadData("src/test/resources/TextBoxData.xml", TextBoxObject.class);
         TextBoxObject data = textBoxObjectMap.get("dataSet_1");
 
         ChromeOptions options = new ChromeOptions();
