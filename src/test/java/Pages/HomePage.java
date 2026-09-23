@@ -35,6 +35,11 @@ public class HomePage {
         elementMethods.clickOnElement(elementsButton);
     }
 
+    public void clickElementsWithJavaScript(){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].click();", elementsButton);
+    }
+
     public void clickAlerts()
     {
         elementMethods.clickOnElement(alertsButton);

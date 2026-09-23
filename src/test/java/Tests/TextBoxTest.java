@@ -56,7 +56,7 @@ public class TextBoxTest {
 //        elementsList.get(0).click();
 
         HomePage homePage = new HomePage(driver);
-        homePage.clickElements();
+        homePage.clickElementsWithJavaScript();
 
         js.executeScript("window.scrollBy(0, -800);"); // 800 pixeli in jos
 
