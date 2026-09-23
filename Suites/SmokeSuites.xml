@@ -5,8 +5,11 @@
 
     <test name="Smoke Tests">
         <classes>
-
-            <class name="Tests.WebTableTest"/>
+            <class name="Tests.AlertTest"/>
+<!--            <class name="Tests.FramesTest"/>-->
+<!--            <class name="Tests.PracticeForumTest"/>-->
+<!--            <class name="Tests.TextBoxTest"/>-->
+<!--            <class name="Tests.WebTableTest"/>-->
         </classes>
     </test>
 

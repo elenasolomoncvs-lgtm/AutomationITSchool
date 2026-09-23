@@ -17,7 +17,7 @@ public class Chrome_Service_Browser implements IBrowser_Service {
     @Override
     public Object browserOptions() {
         ChromeOptions options = new ChromeOptions();
-//        options.addArguments("--user-data-dir=C:\\SeleniumChromeProfile");
+        options.addArguments("--user-data-dir=C:\\SeleniumChromeProfile");
         options.addArguments("start-maximized");
         options.addArguments("no-sandbox");
         String ciCd = System.getProperty("ci_cd");
